@@ -1,4 +1,4 @@
-package ua.nure.your_last_name.Practice4.part5;
+package ua.nure.strebkov.Practice4.part5;
 
 import static org.junit.Assert.*;
 
