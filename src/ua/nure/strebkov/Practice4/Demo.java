@@ -2,7 +2,6 @@ package ua.nure.strebkov.Practice4;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 
 
 public class Demo {
@@ -20,7 +19,7 @@ public class Demo {
 
 		System.out.println("=========================== PART3");
 
-		System.setIn(new ByteArrayInputStream("char\nString\nint\ndoubl\\naaa\nstop".getBytes(ENCODING)));
+		System.setIn(new ByteArrayInputStream("char\nString\nint\ndouble\naaa\nstop".getBytes(ENCODING)));
 		Part3.main(ARGS);
 
 		System.out.println("=========================== PART4");
