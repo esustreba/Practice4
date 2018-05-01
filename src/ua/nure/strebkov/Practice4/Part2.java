@@ -8,7 +8,7 @@ package ua.nure.strebkov.Practice4;
  * The contents of both files (numbers separated by a space)
  * are output to the console.
  *
- * @authot Strebkov D.
+ * @author Strebkov D.
  */
 
 import java.util.Random;
