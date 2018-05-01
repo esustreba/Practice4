@@ -2,6 +2,11 @@ package ua.nure.strebkov.Practice4;
 
 import java.util.regex.*;
 
+/** Read text from part1.txt and convert words
+ * whose length bigger then 3 to upper case.
+ * Use regular expressions.
+ */
+
 public class Part1 {
 	public static String convert(String input) {
 		if (input == null) {

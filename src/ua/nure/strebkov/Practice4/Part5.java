@@ -8,8 +8,18 @@ import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Part5 {
+/** Create resource packages (file properties) for two
+ * localizations: ru and en (put in the src directory).
+ * Packages contain at least two entries.
+ */
 
+
+public class Part5 {
+	/**
+	 *
+	 * @param s
+	 * @return getString.
+	 */
 	public static String writeProperties(String s) {
 		Pattern pattern = Pattern.compile("(\\w+)(\\s)(\\w+)");
 		Matcher matcher = pattern.matcher(s);
@@ -19,6 +29,12 @@ public class Part5 {
 		}
 		return "";
 	}
+
+	/**
+	 * Main method.
+	 * @param args
+	 * @throws IOException
+	 */
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in, "Cp1251"));

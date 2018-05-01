@@ -3,7 +3,27 @@ package ua.nure.strebkov.Practice4;
 import java.util.regex.*;
 import java.io.*;
 
+/** The file contains symbols, words, integers and
+ * floating-point numbers (separated by spaces).
+ *
+ * Write a class that has the following functionality:
+ * in the loop, the user enters the data type from the console
+ * (one of char, String, int, double),
+ * in response, the application prints to the console all
+ * the values ​​of the relevant types that exist in the file.
+ *
+ * The task is solved using regular expressions.
+ *
+ */
+
 public class Part3 {
+
+	/**
+	 * Static method to filter the types: char -> int -> double -> String.
+	 * @param text
+	 * @param type
+	 * @return
+	 */
 	public static String types(String text, String type) {
 		StringBuilder sb = new StringBuilder();
 		Pattern pattern = null;
@@ -37,6 +57,11 @@ public class Part3 {
 		return sb.toString();
 	}
 
+	/**
+	 * Main method
+	 * @param args
+	 * @throws IOException
+	 */
 	public static void main(String[] args) throws IOException {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in, "UTF-8"));
 		String text = Reader.read("part3.txt");

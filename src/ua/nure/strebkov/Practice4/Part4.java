@@ -4,6 +4,15 @@ import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/** Create a class that implements the java.lang.Iterable interface.
+ * The class must parse the text file and return the sentences
+ * from the file. The iterator method of this class must return
+ * an iterator object - an instance of the inner class.
+ *
+ * Don't use existing implementations of iterators from container classes!
+ * Use regular expressions.
+ */
+
 public class Part4 implements Iterable<String> {
 	private String fileName;
 
@@ -19,6 +28,11 @@ public class Part4 implements Iterable<String> {
 			.compile("(?Um)(^|(?<=[.!?]\\s))(\\d+\\.\\s?)*[\\p{L}][^!?]*?[.!?](?=\\s*(\\d+\\.\\s)*[\\p{L}]|$)");
 	private Pattern pattern2 = Pattern.compile("(?iU)(?<=(\\s*|^)).?(\\p{L}+|\\S).?\\p{L}*.?(?=\\s*)");
 
+	/**
+	 * Iterator.
+	 *
+	 * @return toString.
+	 */
 	public Iterator<String> iterator() {
 
 		final Matcher matcher = pattern.matcher(Reader.read(fileName));
@@ -43,6 +57,10 @@ public class Part4 implements Iterable<String> {
 		};
 	}
 
+	/**
+	 * Main method.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Part4 part4 = new Part4("part4.txt");
 		Iterator<String> it = part4.iterator();

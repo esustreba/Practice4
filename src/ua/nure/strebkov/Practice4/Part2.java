@@ -17,6 +17,12 @@ import java.util.regex.Pattern;
 import java.io.*;
 
 public class Part2 {
+    /**
+     * Method generate a random numbers from 0 to 50.
+     * @param name
+     * @param n
+     * @throws IOException
+     */
 
     public static void writeRandomNumber(String name, int n) throws IOException {
         Random rand = new Random();
@@ -28,6 +34,13 @@ public class Part2 {
             bw.close();
     }
 
+    /**
+     * Write array in file.
+     * @param arr
+     * @param name
+     * @throws IOException
+     */
+
     public static void writeArray(int[] arr, String name) throws IOException {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(name), "Cp1251"));
         for (int i = 0; i < arr.length; i++) {
@@ -37,6 +50,13 @@ public class Part2 {
         bw.close();
 
     }
+
+    /**
+     * Read array from file.
+     * @param name
+     * @param n
+     * @return
+     */
 
     public static int[] readArray(String name, int n) {
         int[] res = new int[n];
@@ -49,6 +69,14 @@ public class Part2 {
         }
         return res;
     }
+
+    /**
+     * Method sort the array.
+     * @param arr
+     * @param start
+     * @param end
+     * @return
+     */
 
     public static int[] quickSort(int[] arr, int start, int end) {
         if (start >= end) {
@@ -79,6 +107,12 @@ public class Part2 {
 
         return arr;
     }
+
+    /**
+     * Main method.
+     * @param args
+     * @throws IOException
+     */
 
     public static void main(String[] args) throws IOException {
         int n = 10;

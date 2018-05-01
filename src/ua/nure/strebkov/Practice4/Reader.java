@@ -1,6 +1,10 @@
 package ua.nure.strebkov.Practice4;
 import java.io.*;
 
+/**
+ * Class to read data from file.
+ */
+
 public class Reader {
 	public static String read(String name) {
 		StringBuilder sb = new StringBuilder();
